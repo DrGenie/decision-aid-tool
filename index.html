@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Decision Aid Tool&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Link to external CSS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="styles.css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chart.js CDN for visualization (optional) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Online Decision Aid Tool&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="decisionForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Cost Continuum --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="cost_cont"&gt;Cost Continuum (cost_cont):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="cost_cont" name="cost_cont"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="10"&gt;Affordable (10)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="15"&gt;Low Cost (15)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="20"&gt;Medium Cost (20)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="25"&gt;Moderate Cost (25)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="50"&gt;High Cost (50)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="60"&gt;Expensive (60)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Distance Significance --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="dist_signif"&gt;Distance Significance (dist_signif):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="dist_signif" name="dist_signif"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;High Accessibility (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Low Accessibility (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Distance Local --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="dist_local"&gt;Distance Local (dist_local):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="dist_local" name="dist_local"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Local (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;Non-Local (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Frequency Monthly --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="freq_monthly"&gt;Frequency Monthly (freq_monthly):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="freq_monthly" name="freq_monthly"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Monthly (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;Not Monthly (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Frequency Weekly --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="freq_weekly"&gt;Frequency Weekly (freq_weekly):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="freq_weekly" name="freq_weekly"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Weekly (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;Not Weekly (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Mode Virtual --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="mode_virtual"&gt;Mode Virtual (mode_virtual):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="mode_virtual" name="mode_virtual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;In-Person Only (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Virtual Available (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Mode Hybrid --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="mode_hybrid"&gt;Mode Hybrid (mode_hybrid):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="mode_hybrid" name="mode_hybrid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;In-Person Only (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Hybrid Available (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Duration 2 Hours --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="dur_2hrs"&gt;Duration 2 Hours (dur_2hrs):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="dur_2hrs" name="dur_2hrs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Yes (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;No (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Duration 4 Hours --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="dur_4hrs"&gt;Duration 4 Hours (dur_4hrs):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="dur_4hrs" name="dur_4hrs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="1"&gt;Yes (1)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="0"&gt;No (0)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Submit Button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" onclick="calculateProbability()"&gt;Calculate Probability&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Display Predicted Probability --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="result"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Predicted Probability of Choosing Alternative 1: &lt;span id="probability"&gt;--&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Chart Container (Optional) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;canvas id="probabilityChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Link to external JavaScript --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="script.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
